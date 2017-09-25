@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="DAO.FriendMapper">
+    <select id="isFriend" resultType="java.lang.Boolean">
+        select count(*) from friends where user=#{0} and friend=#{1}
+    </select>
+
+    <insert id="addFriend">
+        insert into friends (user,friend) values(#{0},#{1})
+    </insert>
+</mapper>
