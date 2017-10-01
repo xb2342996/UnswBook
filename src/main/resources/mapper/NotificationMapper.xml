@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="DAO.NotificationMapper">
+    <insert id="addNotification" parameterType="Models.NotificationBean">
+        insert into notification(uuid, fromUser, toUser, type, content) values(#{uuid}, #{fromUser}, #{toUser}, #{type}, #{content})
+    </insert>
+    <select id="getNotificationByType" parameterType="java.lang.String" resultType="Models.NotificationBean">
+        select * from notification where toUser=#{0} and type=#{1}
+    </select>
+    <delete id="deleteNotification" parameterType="java.lang.String">
+        delete from notification where uuid=#{uuid}
+    </delete>
+</mapper>

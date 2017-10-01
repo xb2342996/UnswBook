@@ -88,11 +88,79 @@ public class UserDAO {
         session.close();
         return results;
     }
+    public static List<UserBean> selectUserByUsername(String username){
+        SqlSession session = MybaitsUtil.getSession().openSession();
+        UserMapper mapper = session.getMapper(UserMapper.class);
+
+        List<UserBean> results = mapper.selectUserByUsername(username);
+
+        session.commit();
+        session.close();
+        return results;
+    }
+
+    public static List<UserBean> selectUsersByGender(String gender){
+        SqlSession session = MybaitsUtil.getSession().openSession();
+        UserMapper mapper = session.getMapper(UserMapper.class);
+        List<UserBean> results = mapper.selectUsersByGender(gender);
+
+        session.commit();
+        session.close();
+        return results;
+    }
+
+    public static List<UserBean> selectUsersByBirth(String birth){
+        SqlSession session = MybaitsUtil.getSession().openSession();
+        UserMapper mapper = session.getMapper(UserMapper.class);
+        List<UserBean> results = mapper.selectUsersByBirth(birth);
+        session.commit();
+        session.close();
+        return results;
+    }
+    public static List<UserBean> selectUsersByName(String name){
+        SqlSession session = MybaitsUtil.getSession().openSession();
+        UserMapper mapper = session.getMapper(UserMapper.class);
+        List<UserBean> results = mapper.selectUsersByName(name);
+        session.commit();
+        session.close();
+        return results;
+    }
+
+
+    public static List<UserBean> selectUsersByBirthandGender(String birth,String gender){
+        SqlSession session = MybaitsUtil.getSession().openSession();
+        UserMapper mapper = session.getMapper(UserMapper.class);
+        List<UserBean> results = mapper.selectUsersByBirthandGender(birth,gender);
+        session.commit();
+        session.close();
+        return results;
+    }
+    public static List<UserBean> selectUsersByNameandGender(String name,String gender){
+        SqlSession session = MybaitsUtil.getSession().openSession();
+        UserMapper mapper = session.getMapper(UserMapper.class);
+        List<UserBean> results = mapper.selectUsersByNameandGender(name,gender);
+        session.commit();
+        session.close();
+        return results;
+    }
+    public static List<UserBean> selectUsersByNameandBirth(String name,String birth){
+        SqlSession session = MybaitsUtil.getSession().openSession();
+        UserMapper mapper = session.getMapper(UserMapper.class);
+        List<UserBean> results = mapper.selectUsersByNameandBirth(name,birth);
+        session.commit();
+        session.close();
+        return results;
+    }
+    public static List<UserBean> selectUsersByNameandBirthandGender(String name,String birth, String gender){
+        SqlSession session = MybaitsUtil.getSession().openSession();
+        UserMapper mapper = session.getMapper(UserMapper.class);
+        List<UserBean> results = mapper.selectUsersByNameandBirthandGender(name,birth,gender);
+        session.commit();
+        session.close();
+        return results;
+    }
+
     public static void main(String[] args){
-//        UserBean user = new UserBean("12345","123","536523401@qq.com","123","123","2024-2-4","this is a url!");
-//        UserDAO.insertUser(user);
-//        boolean flag = UserDAO.checkAvailable(user);
-//        UserDAO.selectAllUsers();
-//        System.out.println(flag);
+
     }
 }

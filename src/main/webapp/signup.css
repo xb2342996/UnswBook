@@ -1,0 +1,26 @@
+.nav-title{
+    font-size: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: "Comic Sans MS";
+    font-weight: bolder;
+    color: #009df4;
+}
+h2{
+    color: #000000;
+    font-weight: bolder;
+}
+.form-group-lg{
+    margin-top: 12px;
+}
+.submit-button{
+    height: 50px;
+    background-color: #009df4;
+    color: #ffffff;
+    font-weight: bolder;
+    border-radius: 25px;
+    font-size: 22px;
+}
+input{
+    font-weight: bolder;
+}

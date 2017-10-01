@@ -1,5 +1,6 @@
 package DAO;
 
+import Models.FriendBean;
 import Models.MessageBean;
 import Services.MybaitsUtil;
 import org.apache.ibatis.session.SqlSession;
@@ -28,6 +29,21 @@ public class FriendDAO {
             e.printStackTrace();
             System.out.println("插入失败");
         }
+    }
+    public static List<FriendBean> getFriends(String user){
+        SqlSession session = MybaitsUtil.getSession().openSession();
+        FriendMapper mapper = session.getMapper(FriendMapper.class);
+        List<FriendBean> result = null;
+        try{
+            result = mapper.getFriends(user);
+            session.commit();
+            session.close();
+
+        }catch (Exception e){
+            e.printStackTrace();
+            System.out.println("查询失败");
+        }
+        return result;
     }
     public static void deleteFriend(String user, String friend){
 

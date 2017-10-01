@@ -1,0 +1,61 @@
+.nav-title{
+    font-size: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: "Comic Sans MS";
+    font-weight: bolder;
+    color: #009df4;
+}
+.dropdown-menu{
+    width:580px;
+}
+.ads{
+    margin-left:5px;
+    padding: 0px 0px 0px 5px;
+    height: 39px;
+    border: 1px #cccccc solid;
+    border-radius: 4px;
+}
+.search-btn{
+    margin:0px;
+    padding: 0px;
+    border: 0px;
+    background-color: inherit;
+    width: 38px;
+    height: 34px;
+    border-radius: inherit;
+    outline: none;
+}
+.btn-logout{
+    color: white;
+    background-color: #f4c262;
+    outline:0;
+}
+.btn-profile{
+    color: white;
+    background-color: #f4adf2;
+    outline:0;
+}
+.input-group-addon{
+
+    background-color: white;
+    border: 0px;
+    border-radius: 0px 20px 20px 0px;
+    padding:0px;
+}
+.search-input{
+    height: 34px;
+    width: 250px;
+    padding: 6px 12px 6px 16px;
+    font-size: 16px;
+    line-height: 1.42857143;
+    color: #dddddd;
+    background-color: #fff;
+    background-image: none;
+    border: 0px;
+    border-radius: 20px 0px 0px 20px;
+    outline: none;
+}
+.nav-btn{
+    margin-right: 8px;
+}

@@ -12,7 +12,7 @@
     </select>
 
     <select id="getUserMessages" parameterType="java.lang.String" resultType="Models.MessageBean">
-        select * from messages where username=#{username}
+        select * from messages where username=#{username} order BY date DESC
     </select>
 
 </mapper>

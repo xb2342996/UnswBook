@@ -1,0 +1,49 @@
+body{
+    background-color: #e5ecf1;
+}
+div.textbox{
+    margin: 10px 30px 5px 30px;
+    padding-top: 10px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.op-btn{
+    margin:5px 35px;
+    overflow: hidden;
+}
+.form-control{
+    border:1px #9adafc solid;
+}
+.form-group{
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+.carema{
+    width: 200px;
+    height: 200px;
+    font-size: 60px;
+    border-radius: 100px;
+    border:0;
+    background-color: white;
+    margin-left: 60px;
+}
+.savebtn{
+    height: 34px;
+    margin-left: 5px;
+    border:2px #3cb5f8 solid;
+    border-radius: 17px;
+    background-color: white;
+    color: #3cb5f8;
+    font-weight: bolder;
+}
+a{
+    text-decoration: none;
+}
+input.btn{
+    width: 70px;
+}
+a.btn{
+    width: 85px;
+    border:2px #647580 solid;
+    color: #647580;
+}

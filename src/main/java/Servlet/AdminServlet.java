@@ -22,10 +22,10 @@ public class AdminServlet extends HttpServlet{
         System.out.println(username+flag);
         UserBean user = UserDAO.getUser(username);
 
-        if (flag.equals("active")){
+        if (flag.equals("Active")){
             user.setActived(false);
             UserDAO.banUser(user);
-        }else if (flag.equals("ban")){
+        }else if (flag.equals("Ban")){
             user.setActived(true);
             UserDAO.banUser(user);
         }

@@ -1,0 +1,65 @@
+body{
+    background-color: #e5ecf1;
+}
+p{
+    margin:0;
+}
+p.name{
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: bolder;
+    color:#009ef6
+}
+p.email{
+    font-size: 12px;
+    color: #627787;
+}
+div.friend{
+    margin:4px auto;
+}
+div.friends{
+    margin:6px auto;
+    background-color: white;
+    border-radius: 4px;
+}
+div.info{
+    margin-top: 6px;
+    background-color: white;
+    border-radius: 4px;
+    overflow: hidden;
+}
+div.messages{
+    margin-top: 3px;
+    padding: 3px 0 3px 6px;
+}
+div.content{
+    padding: 0 8px;
+    background-color: #9adafc;
+    border-radius: 4px;
+}
+div.message{
+    background-color: white;
+    margin-bottom: 6px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+p.date{
+    font-size: 13px;
+    color: #aaaaaa;
+}
+p.infocontent{
+    font-size: 16px;
+    font-weight: 500;
+}
+div.detail{
+    float: left;
+    margin: 6px 0 6px 12px;
+}
+div.avatar{
+    float: left;
+    margin: 16px 0;
+}
+label{
+    margin: 0;
+}

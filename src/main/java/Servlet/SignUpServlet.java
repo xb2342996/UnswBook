@@ -14,7 +14,7 @@ import java.util.UUID;
 
 public class SignUpServlet extends HttpServlet{
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String action = req.getParameter("action");
         if (action.equals("signup")){
             req.getSession().invalidate();
@@ -36,11 +36,11 @@ public class SignUpServlet extends HttpServlet{
                 UserDAO.insertUser(user);
                 EmailUtil.sendAccountActiveEmail(user);
                 req.getSession().setAttribute("user", user);
-                req.getRequestDispatcher("registerSuccess.jsp").forward(req, resp);
+                resp.getWriter().write("success");
             }else{
                 String message = "This account has already existed, Please change another username!";
-                req.getSession().setAttribute("errorMessage", message);
-                req.getRequestDispatcher("signup.jsp").forward(req, resp);
+                resp.getWriter().write("failure");
+
             }
         }
     }

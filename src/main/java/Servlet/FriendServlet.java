@@ -1,6 +1,8 @@
 package Servlet;
 
 import DAO.FriendDAO;
+import DAO.NotificationDAO;
+import Models.NotificationBean;
 import Models.UserBean;
 import Services.EmailUtil;
 
@@ -9,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.UUID;
 
 public class FriendServlet extends HttpServlet{
     @Override
@@ -16,6 +19,7 @@ public class FriendServlet extends HttpServlet{
         String action = req.getParameter("action");
         if (action.equals("addFriend")) {
             String flag = req.getParameter("flag");
+
             String friendEmail = req.getParameter("friendEmail");
             String friendName = req.getParameter("friendName");
             UserBean user = (UserBean) req.getSession().getAttribute("userInfo");
@@ -26,9 +30,14 @@ public class FriendServlet extends HttpServlet{
         }else if (action.equals("addConfirm")){
             String username = req.getParameter("username");
             String friendname = req.getParameter("friendname");
-            FriendDAO.addFriend(username, friendname);
-            req.getSession().setAttribute("friendname",username);
-            req.getRequestDispatcher("addFriendSuccess.jsp").forward(req, resp);
+            if (username != null && friendname != null) {
+                FriendDAO.addFriend(username, friendname);
+                String content = friendname + " has confirmed your friend request, now you can see his/her messages!";
+                NotificationBean noti = new NotificationBean(UUID.randomUUID().toString(), friendname, username, "friend", content);
+                NotificationDAO.addNotification(noti);
+                req.getSession().setAttribute("friendname", username);
+                req.getRequestDispatcher("addFriendSuccess.jsp").forward(req, resp);
+            }
         }
     }
 }

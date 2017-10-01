@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class ChangeProfileServlet extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String action = req.getParameter("action");
         System.out.println(action);
         if (action.equals("profile")){
@@ -24,12 +24,32 @@ public class ChangeProfileServlet extends HttpServlet {
             String gender = req.getParameter("gender");
             String photo = "this is an another picture";
 
-            UserBean user = new UserBean(username,password,email,name,gender,birth,photo);
+            UserBean user = (UserBean) req.getSession().getAttribute("userInfo");
+            if (!password.equals("") && password != null){
+                user.setPassword(password);
+            }
+            if (!email.equals("") && email != null){
+                user.setEmail(email);
+            }
+            if (!name.equals("") && name != null){
+                user.setName(name);
+            }
+            if (!birth.equals("") && birth != null){
+                user.setBirth(birth);
+            }
+            if (!gender.equals("") && gender != null){
+                user.setGender(gender);
+            }
+            if (!photo.equals("") && photo != null){
+                user.setPhoto(photo);
+            }
+
             UserDAO.updateActivedUser(user);
 
-            String message = "Update Successfully!";
-            req.getSession().setAttribute("message", message);
-            req.getRequestDispatcher("profile.jsp").forward(req, resp);
+            req.getSession().setAttribute("userInfo", user);
+            String message = "success";
+            resp.getWriter().write(message);
+//            req.getRequestDispatcher("profile.jsp").forward(req, resp);
         }
     }
 }

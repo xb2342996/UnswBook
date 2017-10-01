@@ -1,0 +1,88 @@
+body{
+    background-color: #e5ecf1;
+}
+
+textarea.form-control {
+    resize: none;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 2px #34f1f4 solid;
+}
+button.btn-submit{
+    margin-top: 6px;
+    margin-bottom: 6px;
+    font-weight: bolder;
+    border-radius: 20px;
+    border: 0px;
+    color: white;
+    background-color: #ffa3db;
+    padding: 6px 14px;
+    outline:0
+}
+button.btn-picture{
+    margin-top: 6px;
+    margin-bottom: 6px;
+    border: 0px;
+    height: 32px;
+    text-align: center;
+}
+form.form{
+    margin-bottom: 0px;
+}
+span.glyphicon{
+    top: 0px;
+}
+div.col-lg-6{
+    padding: 0px;
+}
+div.header{
+    width: 638px;
+    height: 28px;
+    float: right;
+    padding-left:5px;
+}
+label.username{
+    margin: 0px;
+    color: #000000;
+    font-weight: bolder;
+    height: inherit;
+    line-height: inherit;
+    font-size: 16px;
+
+}
+label.date{
+    margin: 0px;
+    padding-left: 5px;
+    color: #999999;
+    font-weight: normal;
+    height: inherit;
+    line-height: inherit;
+
+}
+div.content{
+    margin-top: 5px;
+    padding: 10px 12px 2px 12px;
+    overflow: hidden;
+}
+div.image{
+    width: 50px;
+    height: 50px;
+    float:left ;
+}
+div.text{
+    width: 638px;
+    float: right;
+    padding-left:5px;
+}
+.like-btn{
+    border: 0;
+    float: right;
+    color: #ffa3db;
+    outline: 0;
+    background-color: white;
+    font-size: 22px;
+}
+span.message{
+    font-family: "Helvetica Neue";
+}
+

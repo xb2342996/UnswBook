@@ -11,6 +11,15 @@ public class UserBean {
     public String randomCode;
     public boolean actived;
     public String joindate;
+    public boolean friend;
+
+    public boolean isFriend() {
+        return friend;
+    }
+
+    public void setFriend(boolean friend) {
+        this.friend = friend;
+    }
 
     public String getJoindate() {
         return joindate;

@@ -39,9 +39,9 @@ public class MessageServlet extends HttpServlet {
 
             //获取所有消息 返回主页
             List<MessageBean> results = MessageDAO.getAllMessages(username);
-
+            resp.getWriter().write("Send Successfully");
             req.getSession().setAttribute("allMessages", results);
-            req.getRequestDispatcher("home.jsp").forward(req, resp);
+//            req.getRequestDispatcher("home.jsp").forward(req, resp);
         }
     }
 }
