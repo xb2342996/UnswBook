@@ -4,15 +4,15 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="DAO.MessageMapper">
     <insert id="insertMessage" parameterType="Models.MessageBean">
-        insert into messages(uuid,username,message,date) values (#{uuid},#{username},#{message},#{date})
+        insert into messages(uuid,username,message,date,picture) values (#{uuid},#{username},#{message},#{date},#{picture})
     </insert>
 
     <select id="getAllMessages" parameterType="java.lang.String" resultType="Models.MessageBean">
-        select m.uuid as uuid, m.username as username, m.message as message, m.date as date, case WHEN l.likeduser is null then 0 else 1 end as liked from (select * from messages where username in (select friend from friends where user=#{username}) or username=#{username}) as m left join (select * from likes where likeduser=#{username}) as l on m.uuid = l.uuid order by date DESC
+        select t.uuid as uuid, t.username as username, t.message as message, t.date as date, t.liked, t.picture as picture, users.photo as avatar from users, (select m.uuid as uuid, m.username as username, m.message as message, m.date as date, case WHEN l.likeduser is null then 0 else 1 end as liked, m.picture as picture from (select * from messages where username in (select friend from friends where user=#{username}) or username=#{username}) as m left join (select * from likes where likeduser=#{username}) as l on m.uuid = l.uuid) as t where users.username = t.username order by date desc
     </select>
 
     <select id="getUserMessages" parameterType="java.lang.String" resultType="Models.MessageBean">
-        select * from messages where username=#{username} order BY date DESC 
+        select * from messages where username=#{username} order BY date DESC
     </select>
 
 </mapper>

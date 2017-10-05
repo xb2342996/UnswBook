@@ -28,10 +28,13 @@
             <p class="navbar-left nav-title">UNSWBook</p>
             <ul class="nav navbar-nav navbar-right">
                 <li class="nav-btn">
-                    <button class="btn btn-default navbar-btn btn-profile" onclick="{location.href='profile.jsp'}">Profile</button>
+                    <button class="btn btn-default navbar-btn btn-profile" onclick="{location.href='advancedSearch.jsp'}" style="outline: 0">Advanced Search</button>
                 </li>
                 <li class="nav-btn">
-                    <button class="btn btn-default navbar-btn btn-logout" onclick="{location.href='login.jsp'}">Logout</button>
+                    <button class="btn btn-default navbar-btn btn-profile" onclick="{location.href='profile.jsp'}" style="outline: 0">Profile</button>
+                </li>
+                <li class="nav-btn">
+                    <button class="btn btn-default navbar-btn btn-logout" onclick="{location.href='login.jsp'}" style="outline: 0">Logout</button>
                 </li>
             </ul>
 
@@ -48,22 +51,6 @@
                     </div>
                 </div>
             </form>
-            <!--<ul class="nav navbar-nav navbar-left">-->
-            <!--<li class="dropdown">-->
-            <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Advanced Search <span class="caret"></span></a>-->
-            <!--<ul class="dropdown-menu">-->
-            <!--<li>-->
-            <!--<form action="searchFriends">-->
-            <!--<input type="hidden" name="action" value="advancedSearchFriend">-->
-            <!--<input class="ads" type="text" placeholder="Birth" name="friendBirth">-->
-            <!--<input class="ads" type="text" placeholder="Name" name="friendName">-->
-            <!--<input class="ads" type="text" placeholder="Gender" name="friendGender">-->
-            <!--<input class="ads search-btn" type="submit" value="Search">-->
-            <!--</form>-->
-            <!--</li>-->
-            <!--</ul>-->
-            <!--</li>-->
-            <!--</ul>-->
         </div>
     </div>
 </nav>
@@ -75,14 +62,18 @@
             for (UserBean user : searchResult) {
             String title = !user.isFriend() ? "Add Friend" : "Cancal Friend";
             String gender = user.getGender().equals("female") ? "\uD83D\uDEBA" : "\uD83D\uDEB9";
+            String avatar = "img/default-avatar.jpg";
+            if (user.getPhoto() != null && !user.getPhoto().equals("")){
+                avatar = "avatar/"+user.getPhoto();
+            }
         %>
             <div class="friend col-lg-4">
                 <div class="wrapper"  style="background: white">
                     <div class="content">
-                        <div class="image pull-left">
-                            <img class="icon img-circle" src="img/icon.jpeg">
+                        <div class="image">
+                            <img class="icon img-circle" src="<%=avatar%>">
                         </div>
-                        <div class="info pull-right">
+                        <div class="info">
                             <div class="detail"><span>Username: <%=user.getUsername()%> </span></div>
                             <div class="detail"><span>Email: <%=user.getEmail()%></span></div>
                             <div class="detail"><span>Name: <%=user.getName()%></span></div>

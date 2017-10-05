@@ -18,6 +18,10 @@
     List<MessageBean> messageList = MessageDAO.getUserMessage(username);
     List<FriendBean> friendList = FriendDAO.getFriends(username);
     String gender = user.getGender().equals("male") ? "\uD83D\uDEB9" : "\uD83D\uDEBA";
+    String avatar = "img/default-avatar.jpg";
+    if (user.getPhoto() != null && !user.getPhoto().equals("")){
+        avatar = "avatar/"+user.getPhoto();
+    }
 %>
 <html>
 <head>
@@ -35,7 +39,7 @@
             <p class="navbar-left nav-title">UNSWBook Administrator</p>
             <ul class="nav navbar-nav navbar-right">
                 <li class="nav-btn">
-                    <button class="btn btn-default navbar-btn btn-logout" onclick="{location.href='adminLogin.jsp'}">Logout</button>
+                    <button class="btn btn-default navbar-btn btn-logout" onclick="{location.href='adminLogin.jsp'}"  style="outline: 0">Logout</button>
                 </li>
             </ul>
 
@@ -60,7 +64,7 @@
         <div class="content col-lg-8 col-lg-offset-2" >
             <div class="info col-lg-4 pull-left">
                 <div class="avatar">
-                    <img class="img-circle" src="img/icon.jpeg" width="100" height="100">
+                    <img class="img-circle" src="<%=avatar%>" width="100" height="100">
                 </div>
                 <div class="detail">
                     <div><label>Username:</label><p><%=user.getUsername()%></p></div>
@@ -78,6 +82,15 @@
                     %>
                     <div class="message">
                         <p class="infocontent"><%=message.getMessage()%></p>
+                        <%
+                            if(message.getPicture() != null){
+                        %>
+                        <div class="picture">
+                            <img src="upload/<%=message.getPicture()%>" width="150" height="150">
+                        </div>
+                        <%
+                            }
+                        %>
                         <p class="date pull-right"><%=message.getDate()%></p>
                     </div>
                     <%

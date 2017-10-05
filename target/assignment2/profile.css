@@ -26,6 +26,7 @@ div.textbox{
     border:0;
     background-color: white;
     margin-left: 60px;
+    outline: 0;
 }
 .savebtn{
     height: 34px;

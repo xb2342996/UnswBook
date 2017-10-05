@@ -13,12 +13,10 @@ div.addbtn{
     margin: 5px 25px;
 }
 div.info{
-    margin-right: 10px;
+    padding:0 10px 0px 40px;
 }
 div.image{
-    margin-left: 20px;
     margin-top: 16px;
-
 }
 div.friend{
     padding-top:8px;

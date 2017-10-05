@@ -32,10 +32,13 @@
             <p class="navbar-left nav-title">UNSWBook</p>
             <ul class="nav navbar-nav navbar-right">
                 <li class="nav-btn">
-                    <button class="btn btn-default navbar-btn btn-profile" onclick="{location.href='profile.jsp'}">Profile</button>
+                    <button class="btn btn-default navbar-btn btn-profile" onclick="{location.href='advancedSearch.jsp'}" style="outline: 0">Advanced Search</button>
                 </li>
                 <li class="nav-btn">
-                    <button class="btn btn-default navbar-btn btn-logout" onclick="{location.href='login.jsp'}">Logout</button>
+                    <button class="btn btn-default navbar-btn btn-profile" onclick="{location.href='profile.jsp'}" style="outline: 0">Profile</button>
+                </li>
+                <li class="nav-btn">
+                    <button class="btn btn-default navbar-btn btn-logout" onclick="{location.href='login.jsp'}" style="outline: 0">Logout</button>
                 </li>
             </ul>
 
@@ -52,34 +55,18 @@
                     </div>
                 </div>
             </form>
-            <!--<ul class="nav navbar-nav navbar-left">-->
-            <!--<li class="dropdown">-->
-            <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Advanced Search <span class="caret"></span></a>-->
-            <!--<ul class="dropdown-menu">-->
-            <!--<li>-->
-            <!--<form action="searchFriends">-->
-            <!--<input type="hidden" name="action" value="advancedSearchFriend">-->
-            <!--<input class="ads" type="text" placeholder="Birth" name="friendBirth">-->
-            <!--<input class="ads" type="text" placeholder="Name" name="friendName">-->
-            <!--<input class="ads" type="text" placeholder="Gender" name="friendGender">-->
-            <!--<input class="ads search-btn" type="submit" value="Search">-->
-            <!--</form>-->
-            <!--</li>-->
-            <!--</ul>-->
-            <!--</li>-->
-            <!--</ul>-->
         </div>
     </div>
 </nav>
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-6 col-lg-offset-3" style="background: #ededed">
-            <form id="messageform" class="form col-lg-10 col-lg-offset-1" action="message">
+            <form id="messageform" class="form col-lg-10 col-lg-offset-1" action="message" enctype="multipart/form-data">
                 <div class="form-group">
-                    <input type="hidden" name="action" value="message">
                     <textarea class="form-control" name="message" id="" cols="30" rows="3" placeholder="What's happening"></textarea>
                     <div class="form-group">
-                        <button type="button" class="btn pull-left btn-default btn-picture" aria-label="Left Align">
+                        <input type="file" id="uploadImg" name="filename" style="visibility: hidden; height: 0px; width: 0px">
+                        <button type="button" class="btn pull-left btn-default btn-picture" aria-label="Left Align" onclick="selectimg()">
                             <span class="glyphicon glyphicon-picture"></span>
                         </button>
                         <button class="pull-right btn-submit" type="submit">Post</button>
@@ -92,10 +79,15 @@
 
             for (MessageBean message : results) {
                 String title = message.liked ? "glyphicon glyphicon-heart": "glyphicon glyphicon-heart-empty";
+                String avatar = "img/default-avatar.jpg";
+                if (message.getAvatar() != null && !message.getAvatar().equals("")){
+                    avatar = "avatar/"+message.getAvatar();
+                }
+//                System.out.println(avatar);
         %>
             <div class="content" style="background-color: white">
                 <div class="image">
-                    <img class="icon" src="img/icon.jpeg" alt="no image" width="50" height="50">
+                    <img class="icon" src="<%=avatar%>" alt="no image" width="50" height="50">
                 </div>
                 <div class="header">
                     <label class="username"><%=message.getUsername()%></label>
@@ -107,6 +99,15 @@
                 <div class="text">
                     <span class="message"><%=message.getMessage()%></span>
                 </div>
+                <%
+                    if (message.getPicture() != null){
+                %>
+                <div class="picture">
+                    <img src="upload/<%=message.getPicture()%>" width="150" height="150">
+                </div>
+                <%
+                    }
+                %>
             </div>
         <%
             }

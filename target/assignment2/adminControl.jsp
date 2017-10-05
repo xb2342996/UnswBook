@@ -64,7 +64,7 @@
             <p class="navbar-left nav-title">UNSWBook Adminstrator</p>
             <ul class="nav navbar-nav navbar-right">
                 <li class="nav-btn">
-                    <button class="btn btn-default navbar-btn btn-logout" onclick="{location.href='adminLogin.jsp'}">Logout</button>
+                    <button class="btn btn-default navbar-btn btn-logout" onclick="{location.href='adminLogin.jsp'}"  style="outline: 0">Logout</button>
                 </li>
             </ul>
 

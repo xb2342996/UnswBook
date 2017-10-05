@@ -31,10 +31,18 @@
     background-color: #f4c262;
     outline:0;
 }
+
 .btn-profile{
     color: white;
     background-color: #f4adf2;
     outline:0;
+    border-radius: 20px;
+}
+button.btn-profile:hover button.btn-profile:active{
+    color: white;
+    background-color: #f4adf2;
+    outline:0;
+    border-radius: 20px;
 }
 .input-group-addon{
 

@@ -38,25 +38,20 @@ public class LoginServlet extends HttpServlet {
 
                         req.getSession().setAttribute("allMessages", results);
                         req.getSession().setAttribute("userInfo", user);
-                        req.getRequestDispatcher("home.jsp").forward(req, resp);
+                        resp.getWriter().write("success");
+
                     }else {
                         String message = "The username and password you entered did not match our records. Please double-check and try again.";
-
-                        req.getSession().setAttribute("errorMessage", message);
-                        req.getRequestDispatcher("login.jsp").forward(req, resp);
+                        resp.getWriter().write(message);
                     }
                 }else {
                     String message = "This account isn't active, Please check your E-mail!";
-
-                    req.getSession().setAttribute("errorMessage", message);
-                    req.getRequestDispatcher("login.jsp").forward(req, resp);
+                    resp.getWriter().write(message);
                 }
 
             }else {
                 String message = "This account doesn't exist, Please sign up!";
-
-                req.getSession().setAttribute("errorMessage", message);
-                req.getRequestDispatcher("login.jsp").forward(req, resp);
+                resp.getWriter().write(message);
             }
 
         }else if(action.equals("adminLogin")){

@@ -35,10 +35,13 @@
             <p class="navbar-left nav-title">UNSWBook</p>
             <ul class="nav navbar-nav navbar-right">
                 <li class="nav-btn">
-                    <button class="btn btn-default navbar-btn btn-profile" onclick="{location.href='profile.jsp'}">Profile</button>
+                    <button class="btn btn-default navbar-btn btn-profile" onclick="{location.href='advancedSearch.jsp'}" style="outline: 0">Advanced Search</button>
                 </li>
                 <li class="nav-btn">
-                    <button class="btn btn-default navbar-btn btn-logout" onclick="{location.href='login.jsp'}">Logout</button>
+                    <button class="btn btn-default navbar-btn btn-profile" onclick="{location.href='profile.jsp'}" style="outline: 0">Profile</button>
+                </li>
+                <li class="nav-btn">
+                    <button class="btn btn-default navbar-btn btn-logout" onclick="{location.href='login.jsp'}" style="outline: 0">Logout</button>
                 </li>
             </ul>
 
@@ -56,22 +59,6 @@
                     </div>
                 </div>
             </form>
-            <!--<ul class="nav navbar-nav navbar-left">-->
-            <!--<li class="dropdown">-->
-            <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Advanced Search <span class="caret"></span></a>-->
-            <!--<ul class="dropdown-menu">-->
-            <!--<li>-->
-            <!--<form action="searchFriends">-->
-            <!--<input type="hidden" name="action" value="advancedSearchFriend">-->
-            <!--<input class="ads" type="text" placeholder="Birth" name="friendBirth">-->
-            <!--<input class="ads" type="text" placeholder="Name" name="friendName">-->
-            <!--<input class="ads" type="text" placeholder="Gender" name="friendGender">-->
-            <!--<input class="ads search-btn" type="submit" value="Search">-->
-            <!--</form>-->
-            <!--</li>-->
-            <!--</ul>-->
-            <!--</li>-->
-            <!--</ul>-->
         </div>
     </div>
 </nav>
@@ -80,9 +67,14 @@
     <div class="row" >
         <div class="col-lg-4 col-lg-offset-4" >
             <div class="textbox" style="background: #e6f6fe">
-                <form id="submitform" class="form-horizontal">
+                <form id="submitform" class="form-horizontal" enctype="multipart/form-data">
                     <input type="hidden" name="action" value="profile">
-                    <div class="form-group"><div class="col-lg-10 col-lg-offset-1"><button class="carema"><span class="glyphicon glyphicon-camera"></span></button></div></div>
+                    <div class="form-group">
+                        <div class="col-lg-10 col-lg-offset-1">
+                            <input type="file" id="uploadImg" name="filename" style="visibility: hidden; height: 0px; width: 0px">
+                            <button type="button" class="carema" onclick="selectimg()" aria-label="Left Align"><span class="glyphicon glyphicon-camera"></span></button>
+                        </div>
+                    </div>
                     <fieldset disabled>
                         <div class="form-group">
                             <div class="col-lg-10 col-lg-offset-1">

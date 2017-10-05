@@ -24,6 +24,10 @@ setInterval(function(){
     });
 },10000);
 
+function selectimg() {
+    $('#uploadImg').trigger("click");
+    return false;
+}
 
 function like(button, mid, username) {
     var title='';
@@ -43,10 +47,13 @@ function like(button, mid, username) {
 }
 $(function(){
     $('#messageform').submit(function(){
+        var form = new FormData(document.getElementById("messageform"));
         $.ajax({
             type:'POST',
             url:'/message',
-            data:$(this).serialize(),
+            processData: false,
+            contentType: false,
+            data: form,
             success:function(data){
                 alert(data);
                 window.location.href='/home.jsp';
@@ -54,11 +61,4 @@ $(function(){
         });
         return false;
     });
-    // $('#likebtn').click(function(){
-    //     if($(this).find('span').hasClass("glyphicon glyphicon-heart")){
-    //         $(this).find('span').attr("class", "glyphicon glyphicon-heart-empty")
-    //     }else {
-    //         $(this).find('span').attr("class", "glyphicon glyphicon-heart")
-    //     }
-    // });
 });

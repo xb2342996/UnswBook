@@ -6,6 +6,32 @@ public class MessageBean {
     public String username;
     public String date;
     public boolean liked;
+    public String picture;
+    public String avatar;
+
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
+
+    public boolean isLiked() {
+        return liked;
+    }
+
+    public void setLiked(boolean liked) {
+        this.liked = liked;
+    }
+
+    public String getPicture() {
+        return picture;
+    }
+
+    public void setPicture(String picture) {
+        this.picture = picture;
+    }
 
     public String getMessage() {
         return message;
@@ -39,12 +65,13 @@ public class MessageBean {
         this.uuid = uuid;
     }
 
-    public MessageBean(String uuid, String username, String message, String date){
+    public MessageBean(String uuid, String username, String message, String date, String picture){
         super();
         this.uuid = uuid;
         this.username = username;
         this.message = message;
         this.date = date;
+        this.picture = picture;
     }
     public MessageBean(){
         super();

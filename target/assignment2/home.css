@@ -85,4 +85,8 @@ div.text{
 span.message{
     font-family: "Helvetica Neue";
 }
+div.picture{
+    margin:3px 6px 3px 6px;
+    float: left;
+}
 

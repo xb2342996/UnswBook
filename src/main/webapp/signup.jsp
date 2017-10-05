@@ -24,7 +24,7 @@
         <div class="collapse navbar-collapse">
             <p class="navbar-left nav-title">UNSW Book</p>
             <ul class="nav navbar-nav navbar-right">
-                <li><button class="btn btn-default navbar-btn btn-info" onclick="{location.href='/login.jsp'}">Login</button></li>
+                <li><button class="btn btn-default navbar-btn btn-info" onclick="{location.href='/login.jsp'}"  style="outline: 0">Login</button></li>
             </ul>
         </div>
     </div>
@@ -50,8 +50,15 @@
                 <div class="form-group-lg">
                     <input class="form-control" type="text" placeholder="Name" id="name" name="name">
                 </div>
-                <div class="form-group-lg">
-                    <input class="form-control" type="text" placeholder="Gender" id="gender" name="gender">
+                <div class="radio">
+                    <label class="radio-inline">
+                        <input class="radio" type="radio" placeholder="Gender" name="gender" value="male">
+                        🚹
+                    </label>
+                    <label class="radio-inline">
+                        <input class="radio" type="radio" placeholder="Gender" name="gender" value="female">
+                        🚺
+                    </label>
                 </div>
                 <div class="form-group-lg">
                     <input class="form-control" type="text" placeholder="Birth" id="birth" name="birth">

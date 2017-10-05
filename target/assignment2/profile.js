@@ -1,9 +1,12 @@
 $(function(){
     $('#submitform').submit(function(){
+        var form = new FormData(document.getElementById("submitform"));
         $.ajax({
             type:'post',
             url:'/profile',
-            data:$(this).serialize(),
+            data:form,
+            processData: false,
+            contentType: false,
             success:function(data){
                 if (data == 'success'){
                     alert("Change successfully!");
@@ -16,3 +19,7 @@ $(function(){
         return false;
     });
 });
+function selectimg() {
+    $('#uploadImg').trigger("click");
+    return false;
+}
