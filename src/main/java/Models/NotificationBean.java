@@ -4,7 +4,7 @@ public class NotificationBean {
     public String uuid;
     public String fromUser;
     public String toUser;
-    public String type;
+    public String date;
     public String content;
 
     public String getUuid() {
@@ -31,12 +31,12 @@ public class NotificationBean {
         this.toUser = toUser;
     }
 
-    public String getType() {
-        return type;
+    public String getDate() {
+        return date;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setDate(String date) {
+        this.date = date;
     }
 
     public String getContent() {
@@ -46,12 +46,12 @@ public class NotificationBean {
     public void setContent(String content) {
         this.content = content;
     }
-    public NotificationBean(String uuid, String from, String to, String type, String content ){
+    public NotificationBean(String uuid, String from, String to, String date, String content ){
         super();
         this.uuid = uuid;
         this.fromUser = from;
         this.toUser = to;
-        this.type = type;
+        this.date = date;
         this.content = content;
     }
     public NotificationBean(){

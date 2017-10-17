@@ -1,0 +1,28 @@
+.message{
+    padding:5px 6px;
+    overflow:hidden;
+    border-bottom:2px #999 dashed;
+    margin:5px 0px;
+}
+label.date{
+    width:90%;
+    margin-bottom:0px;
+    float:left;
+    margin-left:6px;
+}
+span.content{
+    width: 90%;
+    float:left;
+    margin:3px 6px;
+}
+.remove{
+    margin:0;
+    border:0;
+    margin-top:5px;
+    padding:3px 6px 0 6px;
+    background-color:white;
+    text-align:center;
+    font-size:14px;
+    float:right;
+    outline:0;
+}

@@ -30,5 +30,6 @@
         <mapper resource="mapper/FriendMapper.xml"/>
         <mapper resource="mapper/LikeMapper.xml"/>
         <mapper resource="mapper/NotificationMapper.xml"/>
+        <mapper resource="mapper/ReportMapper.xml"/>
     </mappers>
 </configuration>

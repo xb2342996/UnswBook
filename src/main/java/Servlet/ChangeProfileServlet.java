@@ -1,7 +1,10 @@
 package Servlet;
 
+import DAO.ReportDAO;
 import DAO.UserDAO;
+import Models.Activity;
 import Models.UserBean;
+import Services.DateUtil;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
@@ -15,6 +18,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
+import java.util.UUID;
 
 public class ChangeProfileServlet extends HttpServlet {
     @Override
@@ -95,7 +99,9 @@ public class ChangeProfileServlet extends HttpServlet {
         }
 
         UserDAO.updateActivedUser(user);
-
+        gender = user.getGender().equals("male") ? "his" : "her";
+        String operation = user.getUsername()+ " changed "+ gender +" account profile.";
+        ReportDAO.addActivity(new Activity(UUID.randomUUID().toString(),user.getUsername(), DateUtil.getCurrentTime(),operation));
         req.getSession().setAttribute("userInfo", user);
         String message = "success";
         resp.getWriter().write(message);

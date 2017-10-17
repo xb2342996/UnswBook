@@ -61,7 +61,7 @@
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="collapse navbar-collapse">
-            <p class="navbar-left nav-title">UNSWBook Adminstrator</p>
+            <a class="navbar-left nav-title" href="#">UNSWBook Adminstrator</a>
             <ul class="nav navbar-nav navbar-right">
                 <li class="nav-btn">
                     <button class="btn btn-default navbar-btn btn-logout" onclick="{location.href='adminLogin.jsp'}"  style="outline: 0">Logout</button>
@@ -101,13 +101,14 @@
                 }
                 for (UserBean user: list) {
                 String title = user.isActived() ? "Ban" : "Active";
-                String gender = user.getGender().equals("male") ? "\uD83D\uDEB9" : "\uD83D\uDEBA";
+
+//                String gender = user.getGender().equals("male") ? "\uD83D\uDEB9" : "\uD83D\uDEBA";
             %>
             <div class="list" style="background-color: #ffffff">
                 <button class="active pull-right" id="control" value="<%=user.getUsername()%>"><%=title%></button>
                 <div class="username">
                     <a class="report" href="userReoprt.jsp?username=<%=user.getUsername()%>"><%=user.getUsername()%></a>
-                    <span class="info"><%=gender%></span>
+                    <%--<span class="info"><%=gender%></span>--%>
                     <span class="info"><%=user.getEmail()%></span>
                 </div>
             </div>

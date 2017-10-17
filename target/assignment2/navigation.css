@@ -1,10 +1,11 @@
-.nav-title{
+a.nav-title{
     font-size: 30px;
     margin-top: 5px;
     margin-bottom: 5px;
     font-family: "Comic Sans MS";
     font-weight: bolder;
     color: #009df4;
+    text-decoration: none;
 }
 .dropdown-menu{
     width:580px;

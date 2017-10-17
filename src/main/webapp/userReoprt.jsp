@@ -4,7 +4,9 @@
 <%@ page import="java.util.List" %>
 <%@ page import="DAO.MessageDAO" %>
 <%@ page import="DAO.FriendDAO" %>
-<%@ page import="Models.FriendBean" %><%--
+<%@ page import="Models.FriendBean" %>
+<%@ page import="Models.Activity" %>
+<%@ page import="DAO.ReportDAO" %><%--
   Created by IntelliJ IDEA.
   User: kumahyou
   Date: 2017/9/25
@@ -15,7 +17,7 @@
 <%
     String username = request.getParameter("username");
     UserBean user = UserDAO.getUser(username);
-    List<MessageBean> messageList = MessageDAO.getUserMessage(username);
+    List<Activity> activities = ReportDAO.getActivityByUser(username);
     List<FriendBean> friendList = FriendDAO.getFriends(username);
     String gender = user.getGender().equals("male") ? "\uD83D\uDEB9" : "\uD83D\uDEBA";
     String avatar = "img/default-avatar.jpg";
@@ -36,7 +38,7 @@
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="collapse navbar-collapse">
-            <p class="navbar-left nav-title">UNSWBook Administrator</p>
+            <a class="navbar-left nav-title" href="adminControl.jsp">UNSWBook Administrator</a>
             <ul class="nav navbar-nav navbar-right">
                 <li class="nav-btn">
                     <button class="btn btn-default navbar-btn btn-logout" onclick="{location.href='adminLogin.jsp'}"  style="outline: 0">Logout</button>
@@ -62,54 +64,49 @@
 <div class="container-fluid">
     <div class="row">
         <div class="content col-lg-8 col-lg-offset-2" >
-            <div class="info col-lg-4 pull-left">
-                <div class="avatar">
-                    <img class="img-circle" src="<%=avatar%>" width="100" height="100">
+            <div class="left-detail col-lg-4 pull-left">
+                <div class="info">
+                    <div class="avatar">
+                        <img class="img-circle" src="<%=avatar%>" width="100" height="100">
+                    </div>
+                    <div class="detail">
+                        <div><label>Username:</label><p><%=user.getUsername()%></p></div>
+                        <div><label>E-mail:</label><p><%=user.getEmail()%></p></div>
+                        <div><label>Name:</label><p><%=user.getName()%></p></div>
+                        <div><p><label>Gender:</label> <%=gender%></p></div>
+                        <div><p><label>Birth:</label> <%=user.getBirth()%></p></div>
+                        <div><p><label>Join date:</label> <%=user.getJoindate()%></p></div>
+                    </div>
                 </div>
-                <div class="detail">
-                    <div><label>Username:</label><p><%=user.getUsername()%></p></div>
-                    <div><label>E-mail:</label><p><%=user.getEmail()%></p></div>
-                    <div><label>Name:</label><p><%=user.getName()%></p></div>
-                    <div><p><label>Gender:</label> <%=gender%></p></div>
-                    <div><p><label>Birth:</label> <%=user.getBirth()%></p></div>
-                    <div><p><label>Join date:</label> <%=user.getJoindate()%></p></div>
-                </div>
-            </div>
-            <div class="messages col-lg-8 pull-right" >
-                <div>
+                <div class="friends">
+                    <h4>Friends</h4>
                     <%
-                        for (MessageBean message : messageList) {
+                        for (FriendBean friend : friendList) {
                     %>
-                    <div class="message">
-                        <p class="infocontent"><%=message.getMessage()%></p>
-                        <%
-                            if(message.getPicture() != null){
-                        %>
-                        <div class="picture">
-                            <img src="upload/<%=message.getPicture()%>" width="150" height="150">
-                        </div>
-                        <%
-                            }
-                        %>
-                        <p class="date pull-right"><%=message.getDate()%></p>
+                    <div class="friend">
+                        <p class="name"><%=friend.getFriend()%></p>
+                        <p class="email"><%=friend.getEmail()%></p>
                     </div>
                     <%
                         }
                     %>
                 </div>
             </div>
-            <div class="friends col-lg-4 pull-left">
-                <h4>Friends</h4>
-                <%
-                    for (FriendBean friend : friendList) {
-                %>
-                <div class="friend">
-                    <p class="name"><%=friend.getFriend()%></p>
-                    <p class="email"><%=friend.getEmail()%></p>
+            <div class="messages col-lg-8 pull-right" >
+                <div>
+                    <%
+                        for (Activity message : activities) {
+                    %>
+                    <div>
+                        <div class="message">
+                            <span class="content"><%=message.getOperation()%></span>
+                            <label class="date"><%=message.getDate()%></label>
+                        </div>
+                    </div>
+                    <%
+                        }
+                    %>
                 </div>
-                <%
-                    }
-                %>
             </div>
         </div>
     </div>

@@ -20,13 +20,13 @@ public class NotificationDAO {
             e.printStackTrace();
         }
     }
-    public static List<NotificationBean> getNotificationByType(String to, String type){
+    public static List<NotificationBean> getNotificationByUser(String to){
         SqlSession session = MybaitsUtil.getSession().openSession();
         NotificationMapper mapper = session.getMapper(NotificationMapper.class);
         List<NotificationBean> noti = null;
 
         try {
-            noti = mapper.getNotificationByType(to, type);
+            noti = mapper.getNotificationByUser(to);
             session.commit();
             session.close();
         }catch (Exception e){

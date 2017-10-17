@@ -25,7 +25,7 @@
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="collapse navbar-collapse">
-            <p class="navbar-left nav-title">UNSWBook</p>
+            <a class="navbar-left nav-title" href="home.jsp">UNSWBook</a>
             <ul class="nav navbar-nav navbar-right">
                 <li class="nav-btn">
                     <button class="btn btn-default navbar-btn btn-profile" onclick="{location.href='advancedSearch.jsp'}" style="outline: 0">Advanced Search</button>

@@ -1,29 +1,3 @@
-setInterval(function(){
-    $.ajax({
-        type:'POST',
-        url:'/notification?action=friend',
-        success:function(data) {
-            console.log(data.length);
-            if (data.length != 0) {
-                alert(data);
-            }
-        }
-    });
-},10000);
-
-setInterval(function(){
-    $.ajax({
-        type:'POST',
-        url:'/notification?action=like',
-        success:function(data) {
-            console.log(data.length);
-            if (data.length != 0) {
-                alert(data);
-            }
-        }
-    });
-},10000);
-
 function selectimg() {
     $('#uploadImg').trigger("click");
     return false;

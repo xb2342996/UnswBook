@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
   <welcome-file-list>
-    <welcome-file>uploadTest.jsp</welcome-file>
+    <welcome-file>login.jsp</welcome-file>
   </welcome-file-list>
   <servlet>
     <servlet-name>Login</servlet-name>
@@ -93,13 +93,5 @@
   <servlet-mapping>
     <servlet-name>SearhcUser</servlet-name>
     <url-pattern>/searchUser</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <servlet-name>Notification</servlet-name>
-    <servlet-class>Servlet.Notification</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>Notification</servlet-name>
-    <url-pattern>/notification</url-pattern>
   </servlet-mapping>
 </web-app>

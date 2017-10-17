@@ -1,6 +1,8 @@
 package Servlet;
 
 import DAO.MessageDAO;
+import DAO.ReportDAO;
+import Models.Activity;
 import Models.MessageBean;
 import Models.UserBean;
 import Services.DateUtil;
@@ -81,6 +83,8 @@ public class MessageServlet extends HttpServlet {
         MessageBean message = new MessageBean(uuid, username, messageString, DateUtil.getCurrentTime(), file);
         MessageDAO.insertMessage(message);
 
+        String operation = user.getUsername()+ " posted a message at UNSWBook Wall.";
+        ReportDAO.addActivity(new Activity(UUID.randomUUID().toString(),user.getUsername(), DateUtil.getCurrentTime(),operation));
         //获取所有消息 返回主页
         List<MessageBean> results = MessageDAO.getAllMessages(username);
         resp.getWriter().write("Send Successfully");

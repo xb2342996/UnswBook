@@ -21,18 +21,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="navigation.css" type="text/css">
-    <link rel="stylesheet" href="home.css" type="text/css">
     <script src="navigation.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="home.css" type="text/css">
     <script src="home.js" type="text/javascript"></script>
 </head>
 <body>
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="collapse navbar-collapse">
-            <p class="navbar-left nav-title">UNSWBook</p>
+            <a class="navbar-left nav-title" href="#">UNSWBook</a>
             <ul class="nav navbar-nav navbar-right">
                 <li class="nav-btn">
                     <button class="btn btn-default navbar-btn btn-profile" onclick="{location.href='advancedSearch.jsp'}" style="outline: 0">Advanced Search</button>
+                </li>
+                <li class="nav-btn">
+                    <button class="btn btn-default navbar-btn btn-profile" onclick="{location.href='messageboard.jsp'}" style="outline: 0">MessageBoard</button>
                 </li>
                 <li class="nav-btn">
                     <button class="btn btn-default navbar-btn btn-profile" onclick="{location.href='profile.jsp'}" style="outline: 0">Profile</button>

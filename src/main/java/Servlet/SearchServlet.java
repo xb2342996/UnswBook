@@ -1,8 +1,11 @@
 package Servlet;
 
 import DAO.FriendDAO;
+import DAO.ReportDAO;
 import DAO.UserDAO;
+import Models.Activity;
 import Models.UserBean;
+import Services.DateUtil;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -11,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class SearchServlet extends HttpServlet {
     @Override
@@ -81,6 +85,10 @@ public class SearchServlet extends HttpServlet {
         return friends;
     }
     private void responseSearch(List<UserBean> results, UserBean user,HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
+
+        String operation = user.getUsername()+ " searched some friends.";
+        ReportDAO.addActivity(new Activity(UUID.randomUUID().toString(),user.getUsername(), DateUtil.getCurrentTime(),operation));
+
         if (results.size() > 0 && results != null) {
             ArrayList<UserBean> searchResults = checkFriend(results, user.getUsername());
             req.getSession().setAttribute("searchResult", searchResults);

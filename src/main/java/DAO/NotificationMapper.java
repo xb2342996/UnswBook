@@ -9,5 +9,5 @@ public interface NotificationMapper {
 
     public void deleteNotification(String uuid);
 
-    public List<NotificationBean> getNotificationByType(String toUser, String Type);
+    public List<NotificationBean> getNotificationByUser(String toUser);
 }

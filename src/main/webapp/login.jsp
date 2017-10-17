@@ -58,11 +58,11 @@
             <input type="hidden" name="action" value="login">
             <div class="form-group-lg box" >
 
-                <input class="form-control" type="text" placeholder="Username" name="username" value="">
+                <input class="form-control" type="text" placeholder="Username" name="username" value="" required>
             </div>
             <div class="form-group-lg box" >
 
-                <input class="form-control" type="password" placeholder="Password" name="password" value="">
+                <input class="form-control" type="password" placeholder="Password" name="password" value="" required>
 
             </div>
             <div class="form-group-lg box">

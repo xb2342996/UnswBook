@@ -33,12 +33,18 @@
             });
         });
     </script>
+    <style type="text/css">
+        label.gender{
+            font-weight: 700;
+            padding-left: 0px;
+        }
+    </style>
 </head>
 <body>
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="collapse navbar-collapse">
-            <p class="navbar-left nav-title">UNSWBook</p>
+            <a class="navbar-left nav-title" href="home.jsp">UNSWBook</a>
             <ul class="nav navbar-nav navbar-right">
                 <li class="nav-btn">
                     <button class="btn btn-default navbar-btn btn-profile" onclick="{location.href='advancedSearch.jsp'}">Advanced Search</button>
@@ -71,19 +77,23 @@
     <div class="row">
         <form id="adsearch" class="col-lg-4 col-lg-offset-4" action="searchFriends">
             <input type="hidden" name="action" value="advancedSearchFriend">
-            <div class="form-group">
-                <label >Birth:</label>
 
-                <input class="form-control" type="text" placeholder="Birth" name="friendBirth">
-
-            </div>
             <div class="form-group">
                 <label>Name:</label>
                 <input class="form-control" type="text" placeholder="Name" name="friendName">
             </div>
             <div class="form-group">
-                <label >Gender:</label>
-                <input class="form-control" type="text" placeholder="Gender" name="friendGender">
+                <label >Birth:</label>
+                <input class="form-control" type="text" placeholder="Birth" name="friendBirth">
+            </div>
+            <div class="radio">
+                <label class="gender radio-inline">Gender:</label>
+                <label class="radio-inline">
+                    <input class="radio" type="radio" placeholder="Gender" name="friendGender" value="male">🚹
+                </label>
+                <label class="radio-inline">
+                    <input class="radio" type="radio" placeholder="Gender" name="friendGender" value="female">🚺
+                </label>
             </div>
             <div class="form-group">
                 <input class="btn btn-default col-lg-12" type="submit" value="Search">

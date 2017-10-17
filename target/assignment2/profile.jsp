@@ -9,7 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     UserBean user = (UserBean)request.getSession().getAttribute("userInfo");
-    String message = (String)request.getSession().getAttribute("message");
+//    String message = (String)request.getSession().getAttribute("message");
 %>
 <html>
 <head>
@@ -17,22 +17,19 @@
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
     <script src="profile.js" type="text/javascript"></script>
     <script src="navigation.js" type="text/javascript"></script>
     <link rel="stylesheet" href="navigation.css" type="text/css">
     <link rel="stylesheet" href="profile.css" type="text/css">
 </head>
 <body>
-<%
-    if (message!=null){
-%>
-%>
-    <p>The profile has been changed successfully!</p>
-<%}%>
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="collapse navbar-collapse">
-            <p class="navbar-left nav-title">UNSWBook</p>
+            <a class="navbar-left nav-title" href="home.jsp">UNSWBook</a>
             <ul class="nav navbar-nav navbar-right">
                 <li class="nav-btn">
                     <button class="btn btn-default navbar-btn btn-profile" onclick="{location.href='advancedSearch.jsp'}" style="outline: 0">Advanced Search</button>
@@ -82,12 +79,45 @@
                             </div>
                         </div>
                     </fieldset>
-                    <div class="form-group"><div class="col-lg-10 col-lg-offset-1"><input class="col-lg-10 form-control" type="password" placeholder="Password" id="password" name="password"></div></div>
-                    <div class="form-group"><div class="col-lg-10 col-lg-offset-1"><input class="form-control" type="password" placeholder="Confirm Password"></div></div>
-                    <div class="form-group"><div class="col-lg-10 col-lg-offset-1"><input class="form-control" type="text" placeholder="E-mail" id="email" name="email"></div></div>
-                    <div class="form-group"><div class="col-lg-10 col-lg-offset-1"><input class="form-control" type="text" placeholder="Name" id="name" name="name"></div></div>
-                    <div class="form-group"><div class="col-lg-10 col-lg-offset-1"><input class="form-control" type="text" placeholder="Gender" id="gender" name="gender"></div></div>
-                    <div class="form-group"><div class="col-lg-10 col-lg-offset-1"><input class="form-control" type="text" placeholder="Birth" id="birth" name="birth"></div></div>
+                    <!--
+                    <div class="form-group">
+                        <div class="col-lg-10 col-lg-offset-1">
+                            <input class="col-lg-10 form-control" type="password" placeholder="Password" id="password" name="password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-10 col-lg-offset-1">
+                            <input class="form-control" type="password" placeholder="Confirm Password">
+                        </div>
+                    </div>
+                    -->
+                    <div class="form-group">
+                        <div class="col-lg-10 col-lg-offset-1">
+                            <input class="form-control" type="text" placeholder="E-mail" id="email" name="email" value="<%=user.getEmail()%>" data-rule-email="true" data-msg-email="Illegal Email Address" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-10 col-lg-offset-1">
+                            <input class="form-control" type="text" placeholder="Name" id="name" name="name" value="<%=user.getName()%>" required>
+                        </div>
+                    </div>
+                    <div class="radio" id="radio">
+                        <div class="col-lg-10 col-lg-offset-1">
+                            <label class="radio-inline">
+                                <input class="radio" type="radio" checked="<%= user.getGender().equals("male")%>" placeholder="Gender" name="gender" value="male">
+                                🚹
+                            </label>
+                            <label class="radio-inline">
+                                <input class="radio" type="radio" checked="<%= user.getGender().equals("female")%>" placeholder="Gender" name="gender" value="female">
+                                🚺
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-10 col-lg-offset-1">
+                            <input class="form-control" type="text" placeholder="Birth" id="datepicker" name="birth" value="<%=user.getBirth()%>" required>
+                        </div>
+                    </div>
                     <div class="op-btn">
                         <div><button class="btn savebtn pull-right" type="submit">Save</button></div>
                         <div><a class="btn savebtn pull-right" href="home.jsp">Cancel</a></div>

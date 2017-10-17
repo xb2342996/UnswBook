@@ -1,6 +1,8 @@
 package Servlet;
 
+import DAO.ReportDAO;
 import DAO.UserDAO;
+import Models.Activity;
 import Models.UserBean;
 import Services.DateUtil;
 import Services.EmailUtil;
@@ -29,12 +31,15 @@ public class SignUpServlet extends HttpServlet{
             boolean flag = UserDAO.checkAvailable(username);
 
             if (flag == false){
-                String defaultPhoto = "default image";
+                String defaultPhoto = "";
                 UserBean user = new UserBean(username, password, email, name, gender, birth, defaultPhoto, actived);
                 user.setRandomCode(UUID.randomUUID().toString());
                 user.setJoindate(DateUtil.getCurrentTime());
                 UserDAO.insertUser(user);
                 EmailUtil.sendAccountActiveEmail(user);
+
+                String operation = user.getUsername()+ " signed up at UNSWBook.";
+                ReportDAO.addActivity(new Activity(UUID.randomUUID().toString(),user.getUsername(), DateUtil.getCurrentTime(),operation));
                 req.getSession().setAttribute("user", user);
                 resp.getWriter().write("success");
             }else{
