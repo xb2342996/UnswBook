@@ -6,6 +6,7 @@ import Models.Activity;
 import Models.MessageBean;
 import Models.UserBean;
 import Services.DateUtil;
+import Services.EmailUtil;
 import Services.Extractor;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileUploadException;
@@ -104,6 +105,8 @@ public class MessageServlet extends HttpServlet {
         activity.setKeyword(String.join(", ", keyword));
         activity.setName_entity(String.join(", ",people));
         ReportDAO.addActivity(activity);
+
+        EmailUtil.sendNotification(message,String.join(", ", keyword),String.join(", ",people));
         //获取所有消息 返回主页
         List<MessageBean> results = MessageDAO.getAllMessages(username);
         resp.getWriter().write("Send Successfully");

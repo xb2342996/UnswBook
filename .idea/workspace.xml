@@ -7,10 +7,94 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7a66fe8-8451-416d-a8e5-27496d131b72" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/DAO/FriendDAO.class" afterPath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/DAO/FriendDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/DAO/FriendMapper.class" afterPath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/DAO/FriendMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/DAO/LikeDAO.class" afterPath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/DAO/LikeDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/DAO/LikeMapper.class" afterPath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/DAO/LikeMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/DAO/MessageDAO.class" afterPath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/DAO/MessageDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/DAO/MessageMapper.class" afterPath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/DAO/MessageMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/DAO/NotificationDAO.class" afterPath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/DAO/NotificationDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/DAO/NotificationMapper.class" afterPath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/DAO/NotificationMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/DAO/ReportDAO.class" afterPath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/DAO/ReportDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/DAO/ReportMapper.class" afterPath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/DAO/ReportMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/DAO/UserDAO.class" afterPath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/DAO/UserDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/DAO/UserMapper.class" afterPath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/DAO/UserMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/Models/Activity.class" afterPath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/Models/Activity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/Models/FriendBean.class" afterPath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/Models/FriendBean.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/Models/MessageBean.class" afterPath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/Models/MessageBean.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/Models/NotificationBean.class" afterPath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/Models/NotificationBean.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/Models/UserBean.class" afterPath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/Models/UserBean.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/Services/DateUtil.class" afterPath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/Services/DateUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/Services/EmailUtil$1.class" afterPath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/Services/EmailUtil$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/Services/EmailUtil.class" afterPath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/Services/EmailUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/Services/GenerateLinkUtil.class" afterPath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/Services/GenerateLinkUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/Services/Login.class" afterPath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/Services/Login.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/Services/MybaitsUtil.class" afterPath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/Services/MybaitsUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/Servlet/ActiveAccount.class" afterPath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/Servlet/ActiveAccount.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/Servlet/AdminServlet.class" afterPath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/Servlet/AdminServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/Servlet/ChangeProfileServlet.class" afterPath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/Servlet/ChangeProfileServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/Servlet/FriendServlet.class" afterPath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/Servlet/FriendServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/Servlet/LikeServlet.class" afterPath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/Servlet/LikeServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/Servlet/LoginServlet.class" afterPath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/Servlet/LoginServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/Servlet/MessageServlet.class" afterPath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/Servlet/MessageServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/Servlet/SearchServlet.class" afterPath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/Servlet/SearchServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/Servlet/SignUpServlet.class" afterPath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/Servlet/SignUpServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/Servlet/UploadTestServlet.class" afterPath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/Servlet/UploadTestServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/DAO/FriendDAO.class" afterPath="$PROJECT_DIR$/target/classes/DAO/FriendDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/DAO/FriendMapper.class" afterPath="$PROJECT_DIR$/target/classes/DAO/FriendMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/DAO/LikeDAO.class" afterPath="$PROJECT_DIR$/target/classes/DAO/LikeDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/DAO/LikeMapper.class" afterPath="$PROJECT_DIR$/target/classes/DAO/LikeMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/DAO/MessageDAO.class" afterPath="$PROJECT_DIR$/target/classes/DAO/MessageDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/DAO/MessageMapper.class" afterPath="$PROJECT_DIR$/target/classes/DAO/MessageMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/DAO/NotificationDAO.class" afterPath="$PROJECT_DIR$/target/classes/DAO/NotificationDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/DAO/NotificationMapper.class" afterPath="$PROJECT_DIR$/target/classes/DAO/NotificationMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/DAO/ReportDAO.class" afterPath="$PROJECT_DIR$/target/classes/DAO/ReportDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/DAO/ReportMapper.class" afterPath="$PROJECT_DIR$/target/classes/DAO/ReportMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/DAO/UserDAO.class" afterPath="$PROJECT_DIR$/target/classes/DAO/UserDAO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/DAO/UserMapper.class" afterPath="$PROJECT_DIR$/target/classes/DAO/UserMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Models/Activity.class" afterPath="$PROJECT_DIR$/target/classes/Models/Activity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Models/FriendBean.class" afterPath="$PROJECT_DIR$/target/classes/Models/FriendBean.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Models/MessageBean.class" afterPath="$PROJECT_DIR$/target/classes/Models/MessageBean.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Models/NotificationBean.class" afterPath="$PROJECT_DIR$/target/classes/Models/NotificationBean.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Models/UserBean.class" afterPath="$PROJECT_DIR$/target/classes/Models/UserBean.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Services/DateUtil.class" afterPath="$PROJECT_DIR$/target/classes/Services/DateUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Services/EmailUtil$1.class" afterPath="$PROJECT_DIR$/target/classes/Services/EmailUtil$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Services/EmailUtil.class" afterPath="$PROJECT_DIR$/target/classes/Services/EmailUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Services/GenerateLinkUtil.class" afterPath="$PROJECT_DIR$/target/classes/Services/GenerateLinkUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Services/Login.class" afterPath="$PROJECT_DIR$/target/classes/Services/Login.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Services/MybaitsUtil.class" afterPath="$PROJECT_DIR$/target/classes/Services/MybaitsUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Servlet/ActiveAccount.class" afterPath="$PROJECT_DIR$/target/classes/Servlet/ActiveAccount.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Servlet/AdminServlet.class" afterPath="$PROJECT_DIR$/target/classes/Servlet/AdminServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Servlet/ChangeProfileServlet.class" afterPath="$PROJECT_DIR$/target/classes/Servlet/ChangeProfileServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Servlet/FriendServlet.class" afterPath="$PROJECT_DIR$/target/classes/Servlet/FriendServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Servlet/LikeServlet.class" afterPath="$PROJECT_DIR$/target/classes/Servlet/LikeServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Servlet/LoginServlet.class" afterPath="$PROJECT_DIR$/target/classes/Servlet/LoginServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Servlet/MessageServlet.class" afterPath="$PROJECT_DIR$/target/classes/Servlet/MessageServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Servlet/SearchServlet.class" afterPath="$PROJECT_DIR$/target/classes/Servlet/SearchServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Servlet/SignUpServlet.class" afterPath="$PROJECT_DIR$/target/classes/Servlet/SignUpServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Servlet/UploadTestServlet.class" afterPath="$PROJECT_DIR$/target/classes/Servlet/UploadTestServlet.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/adminControl.css" afterPath="$PROJECT_DIR$/src/main/webapp/adminControl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/graph.css" afterPath="$PROJECT_DIR$/src/main/webapp/graph.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/navigation.css" afterPath="$PROJECT_DIR$/src/main/webapp/navigation.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Services/EmailUtil.java" afterPath="$PROJECT_DIR$/src/main/java/Services/EmailUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Servlet/MessageServlet.java" afterPath="$PROJECT_DIR$/src/main/java/Servlet/MessageServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/mapper/FriendMapper.xml" afterPath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/mapper/FriendMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/mapper/LikeMapper.xml" afterPath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/mapper/LikeMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/mapper/MessageMapper.xml" afterPath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/mapper/MessageMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/mapper/ReportMapper.xml" afterPath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/mapper/ReportMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/mapper/UserMapper.xml" afterPath="$PROJECT_DIR$/target/assignment2/WEB-INF/classes/mapper/UserMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/assignment2/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/adminControl.css" afterPath="$PROJECT_DIR$/target/assignment2/adminControl.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/home.jsp" afterPath="$PROJECT_DIR$/target/assignment2/home.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/messageboard.jsp" afterPath="$PROJECT_DIR$/target/assignment2/messageboard.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/navigation.css" afterPath="$PROJECT_DIR$/target/assignment2/navigation.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/profile.jsp" afterPath="$PROJECT_DIR$/target/assignment2/profile.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/searchResult.jsp" afterPath="$PROJECT_DIR$/target/assignment2/searchResult.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/userReoprt.jsp" afterPath="$PROJECT_DIR$/target/assignment2/userReoprt.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/assignment2/userReport.css" afterPath="$PROJECT_DIR$/target/assignment2/userReport.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/FriendMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/FriendMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/LikeMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/LikeMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/MessageMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/MessageMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/ReportMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/ReportMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -43,20 +127,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReportMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ReportMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="70" lean-forward="false" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
-              <folding>
-                <marker date="1508475325000" expanded="true" signature="272:414" ph="insert into activities... " />
-                <marker date="1508475325000" expanded="true" signature="536:579" ph="select * fro... activities" />
-                <marker date="1508475325000" expanded="true" signature="536:598" ph="select * fro... activities" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="AdminServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Servlet/AdminServlet.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -67,21 +137,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adminControl.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="adminControl.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/adminControl.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="515">
-              <caret line="51" column="41" lean-forward="false" selection-start-line="51" selection-start-column="41" selection-end-line="51" selection-end-column="41" />
+            <state relative-caret-position="395">
+              <caret line="43" column="24" lean-forward="true" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/DAO/UserDAO.java">
+      <file leaf-file-name="EmailUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Services/EmailUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="46" column="31" lean-forward="false" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="31" />
+            <state relative-caret-position="384">
+              <caret line="55" column="9" lean-forward="false" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessageServlet.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Servlet/MessageServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -168,7 +248,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/Services/DateUtil.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/advancedSearch.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/DAO/ReportMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/Servlet/ActiveAccount.java" />
@@ -213,12 +292,13 @@
         <option value="$PROJECT_DIR$/src/main/webapp/messageboard.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/profile.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/graph.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/Servlet/MessageServlet.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/userReoprt.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/ReportMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/adminControl.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/navigation.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/graph.css" />
+        <option value="$PROJECT_DIR$/src/main/java/Services/EmailUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Servlet/MessageServlet.java" />
       </list>
     </option>
   </component>
@@ -700,18 +780,19 @@
       <workItem from="1508289597385" duration="9571000" />
       <workItem from="1508340640407" duration="19561000" />
       <workItem from="1508463236876" duration="12421000" />
-      <workItem from="1508505527148" duration="157000" />
+      <workItem from="1508505527148" duration="2614000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="402207000" />
+    <option name="totallyTimeSpent" value="404664000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="832" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -732,12 +813,11 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34473684" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34473684" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -753,35 +833,16 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Servlet/MessageServlet.java</url>
-          <line>53</line>
+          <line>86</line>
           <properties />
-          <option name="timeStamp" value="168" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Servlet/MessageServlet.java</url>
-          <line>57</line>
-          <properties />
-          <option name="timeStamp" value="169" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Servlet/MessageServlet.java</url>
-          <line>60</line>
-          <properties />
-          <option name="timeStamp" value="170" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Servlet/MessageServlet.java</url>
-          <line>79</line>
-          <properties />
-          <option name="timeStamp" value="172" />
+          <option name="timeStamp" value="173" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="173" />
+      <option name="time" value="174" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/Models/UserInfoBean.java" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="284">
@@ -1142,14 +1203,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Servlet/MessageServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ReportMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1228,8 +1281,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/adminControl.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="51" column="41" lean-forward="false" selection-start-line="51" selection-start-column="41" selection-end-line="51" selection-end-column="41" />
+        <state relative-caret-position="395">
+          <caret line="43" column="24" lean-forward="true" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Services/EmailUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="55" column="9" lean-forward="false" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Servlet/MessageServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
           <folding />
         </state>
       </provider>

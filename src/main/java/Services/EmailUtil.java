@@ -1,5 +1,6 @@
 package Services;
 
+import Models.MessageBean;
 import Models.UserBean;
 
 import javax.mail.*;
@@ -38,6 +39,30 @@ public class EmailUtil {
             message.setFrom(new InternetAddress(userEmail));
             message.setRecipient(Message.RecipientType.TO, new InternetAddress(friendEmail));
             message.setContent("<a href='" + GenerateLinkUtil.generateAddFriendLink(username, friendname)+"'>Add Friend!</a>","text/html;charset=utf-8");
+            Transport.send(message);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public static void sendNotification(MessageBean messageBean, String keyword, String name_entity){
+
+        String content = messageBean.getUsername() + " posted a message.<br> The content is \""+ messageBean.getMessage() +"\".<br>";
+        if (!keyword.equals("") && keyword != null){
+            content += "Keywords: "+ keyword +".<br>";
+        }
+        if (!name_entity.equals("") && name_entity != null){
+            content += "Name_entities: "+ name_entity +".";
+        }
+
+        Session session = getSession();
+        MimeMessage message = new MimeMessage(session);
+        try {
+            message.setSubject("Message Notification");
+            message.setSentDate(new Date());
+            message.setFrom(new InternetAddress(From));
+            message.setRecipient(Message.RecipientType.TO, new InternetAddress(From));
+            message.setContent(content,"text/html;charset=utf-8");
             Transport.send(message);
         }catch (Exception e){
             e.printStackTrace();
