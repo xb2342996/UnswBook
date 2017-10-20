@@ -14,4 +14,15 @@
     <select id="getFriends" parameterType="java.lang.String" resultType="Models.FriendBean">
         select username as friend, email from users where username in (select friend from friends where user=#{user})
     </select>
+    <select id="getFriendsInfo" resultType="Models.EdgeBean">
+        select user as 'from', friend as 'to' from friends
+    </select>
+
+    <select id="getFriendsDetail" resultType="Models.NodeBean">
+        select friend as 'id', friend as 'label' from friends where user=#{1}
+    </select>
+
+    <select id="getFriendsEdge" resultType="Models.EdgeBean">
+        select user as 'from', friend as 'to' from friends where user=#{1}
+    </select>
 </mapper>

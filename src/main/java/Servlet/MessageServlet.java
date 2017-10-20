@@ -6,6 +6,7 @@ import Models.Activity;
 import Models.MessageBean;
 import Models.UserBean;
 import Services.DateUtil;
+import Services.Extractor;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
@@ -17,6 +18,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Iterator;
@@ -54,22 +56,23 @@ public class MessageServlet extends HttpServlet {
             if (!item.isFormField()) { // 如果是表单域 ，就是非文件上传元素
 
                 String filename = item.getName(); // 文件的全路径，绝对路径名加文件名
+                if (!filename.equals("")){
+                    String type = getPicSuffix(filename);
+                    file = uuid + "." + type;
 
-                String type = getPicSuffix(filename);
-                file = uuid + "." + type;
-
-                String url = req.getSession().getServletContext().getRealPath("/");
-                String path = url +"upload/" +file;
-                System.out.println(path);
+                    String url = req.getSession().getServletContext().getRealPath("/");
+                    String path = url +"upload/" +file;
+                    System.out.println(path);
 
 
-                File saveFile = new File(path); // 定义一个file指向一个具体的文件
+                    File saveFile = new File(path); // 定义一个file指向一个具体的文件
 
-                try {
-                    item.write(saveFile);// 把上传的内容写到一个文件中
-                } catch (Exception e) {
-                    /* e.printStackTrace(); */
-                    System.out.println("文件为空");
+                    try {
+                        item.write(saveFile);// 把上传的内容写到一个文件中
+                    } catch (Exception e) {
+                        /* e.printStackTrace(); */
+                        System.out.println("文件为空");
+                    }
                 }
             }else {
                 String value = item.getString("UTF-8");
@@ -82,9 +85,25 @@ public class MessageServlet extends HttpServlet {
 
         MessageBean message = new MessageBean(uuid, username, messageString, DateUtil.getCurrentTime(), file);
         MessageDAO.insertMessage(message);
+        List<String> people = null;
+        try {
+            people = Extractor.highlightPeople(message);
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
+        String[] keyword = null;
+        try {
+            keyword = Extractor.highlightKeyword(message);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         String operation = user.getUsername()+ " posted a message at UNSWBook Wall.";
-        ReportDAO.addActivity(new Activity(UUID.randomUUID().toString(),user.getUsername(), DateUtil.getCurrentTime(),operation));
+
+        Activity activity = new Activity(UUID.randomUUID().toString(),user.getUsername(), DateUtil.getCurrentTime(),operation);
+        activity.setKeyword(String.join(", ", keyword));
+        activity.setName_entity(String.join(", ",people));
+        ReportDAO.addActivity(activity);
         //获取所有消息 返回主页
         List<MessageBean> results = MessageDAO.getAllMessages(username);
         resp.getWriter().write("Send Successfully");

@@ -9,4 +9,15 @@
     <delete id="unlike">
         delete from likes where uuid=#{1} and likeduser=#{0}
     </delete>
+    <select id="getNodeLikes" resultType="Models.EdgeBean">
+        select uuid as 'from', likeduser as 'to' from likes
+    </select>
+
+    <select id="getNodeLikeDetail" resultType="Models.EdgeBean">
+        select uuid as 'from', likeduser as 'to' from likes where uuid in (select uuid from messages where message like #{1})
+    </select>
+
+    <select id="getNodeLiker" resultType="Models.NodeBean">
+        select likeduser as 'id', likeduser as 'label' from likes where uuid in(select uuid from messages where message like #{1})
+    </select>
 </mapper>

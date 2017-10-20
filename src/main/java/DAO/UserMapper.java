@@ -1,6 +1,7 @@
 package DAO;
 
 import Models.UserBean;
+import Models.NodeBean;
 
 import java.util.List;
 
@@ -33,5 +34,5 @@ public interface UserMapper {
 
     public List<UserBean> selectUsersByNameandBirthandGender(String name, String birth, String gender);
 
-
+    public List<NodeBean> getUserInfo();
 }

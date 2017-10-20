@@ -16,6 +16,10 @@
         select * from users
     </select>
 
+    <select id="getUserInfo" resultType="Models.NodeBean">
+        select username as id, username as label from users
+    </select>
+
     <update id="updateUser" parameterType="Models.UserBean">
         update users set password=#{password},email=#{email},name=#{name},gender=#{gender},birth=#{birth},photo=#{photo},actived=#{actived} where username=#{username}
     </update>

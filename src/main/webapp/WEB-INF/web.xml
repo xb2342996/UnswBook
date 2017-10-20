@@ -94,4 +94,12 @@
     <servlet-name>SearhcUser</servlet-name>
     <url-pattern>/searchUser</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>Graph</servlet-name>
+    <servlet-class>Servlet.GraphServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Graph</servlet-name>
+    <url-pattern>/graph</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -15,4 +15,23 @@
         select * from messages where username=#{username} order BY date DESC
     </select>
 
+    <select id="getNodeMessages" resultType="Models.NodeBean">
+        select uuid as 'id', message as 'label' from messages
+    </select>
+
+    <select id="getEdgeMessages" resultType="Models.EdgeBean">
+        select username as 'from', uuid as 'to' from messages
+    </select>
+
+    <select id="getNodeMessageDetail" resultType="Models.NodeBean">
+        select uuid as 'id', message as 'label' from messages where message like #{1}
+    </select>
+
+    <select id="getEdgeMessageDetail" resultType="Models.EdgeBean">
+        select username as 'from', uuid as 'to' from messages where message like #{1}
+    </select>
+
+    <select id="getNodeMessagePoster" resultType="Models.NodeBean">
+        select username as 'id', username as 'label' from messages where message like #{1}
+    </select>
 </mapper>

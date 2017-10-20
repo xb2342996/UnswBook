@@ -5,6 +5,16 @@ public class Activity {
     public String user;
     public String date;
     public String operation;
+    public String keyword;
+    public String name_entity;
+
+    public String getName_entity() {
+        return name_entity;
+    }
+
+    public void setName_entity(String name_entity) {
+        this.name_entity = name_entity;
+    }
 
     public String getUuid() {
         return uuid;
@@ -36,6 +46,14 @@ public class Activity {
 
     public void setOperation(String operation) {
         this.operation = operation;
+    }
+
+    public String getKeyword() {
+        return keyword;
+    }
+
+    public void setKeyword(String keyword) {
+        this.keyword = keyword;
     }
 
     public Activity(String uuid, String user, String date, String operation){

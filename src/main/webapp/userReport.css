@@ -99,3 +99,10 @@ span.content{
     float:right;
     outline:0;
 }
+.keyword{
+    font-size:13px;
+    font-weight:normal;
+    margin-left:6px;
+    width:95%;
+    color:#777
+}

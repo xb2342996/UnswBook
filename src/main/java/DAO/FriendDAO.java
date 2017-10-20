@@ -1,7 +1,8 @@
 package DAO;
 
 import Models.FriendBean;
-import Models.MessageBean;
+import Models.EdgeBean;
+import Models.NodeBean;
 import Services.MybaitsUtil;
 import org.apache.ibatis.session.SqlSession;
 
@@ -47,5 +48,54 @@ public class FriendDAO {
     }
     public static void deleteFriend(String user, String friend){
 
+    }
+    public static List<EdgeBean> getFriendsInfo(){
+        SqlSession session = MybaitsUtil.getSession().openSession();
+        FriendMapper mapper = session.getMapper(FriendMapper.class);
+        List<EdgeBean> result = null;
+        try{
+            result = mapper.getFriendsInfo();
+            for (EdgeBean edge: result) {
+                edge.label = "friendOf";
+            }
+            session.commit();
+            session.close();
+        }catch (Exception e){
+            e.printStackTrace();
+            System.out.println("查询失败");
+        }
+        return result;
+    }
+
+    public static List<NodeBean> getFriendsDetail(String user){
+        SqlSession session = MybaitsUtil.getSession().openSession();
+        FriendMapper mapper = session.getMapper(FriendMapper.class);
+        List<NodeBean> result = null;
+        try{
+            result = mapper.getFriendsDetail(user);
+            session.commit();
+            session.close();
+        }catch (Exception e){
+            e.printStackTrace();
+            System.out.println("查询失败");
+        }
+        return result;
+    }
+    public static List<EdgeBean> getFriendsEdge(String user){
+        SqlSession session = MybaitsUtil.getSession().openSession();
+        FriendMapper mapper = session.getMapper(FriendMapper.class);
+        List<EdgeBean> result = null;
+        try{
+            result = mapper.getFriendsEdge(user);
+            for (EdgeBean edge: result) {
+                edge.label = "friendOf";
+            }
+            session.commit();
+            session.close();
+        }catch (Exception e){
+            e.printStackTrace();
+            System.out.println("查询失败");
+        }
+        return result;
     }
 }

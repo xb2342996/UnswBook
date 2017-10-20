@@ -34,7 +34,10 @@
                     <button class="btn btn-default navbar-btn btn-profile" onclick="{location.href='advancedSearch.jsp'}" style="outline: 0">Advanced Search</button>
                 </li>
                 <li class="nav-btn">
-                    <button class="btn btn-default navbar-btn btn-profile" onclick="{location.href='messageboard.jsp'}" style="outline: 0">MessageBoard</button>
+                    <button class="btn btn-default navbar-btn btn-profile" onclick="{location.href='#'}" style="outline: 0">MessageBoard</button>
+                </li>
+                <li class="nav-btn">
+                    <button class="btn btn-default navbar-btn btn-profile" onclick="{location.href='graph.jsp'}" style="outline: 0">Graph</button>
                 </li>
                 <li class="nav-btn">
                     <button class="btn btn-default navbar-btn btn-profile" onclick="{location.href='profile.jsp'}" style="outline: 0">Profile</button>

@@ -1,6 +1,7 @@
 package DAO;
 
 import Models.UserBean;
+import Models.NodeBean;
 import Services.MybaitsUtil;
 import org.apache.ibatis.session.SqlSession;
 
@@ -83,6 +84,20 @@ public class UserDAO {
         UserMapper mapper = session.getMapper(UserMapper.class);
 
         List<UserBean> results = mapper.getAllUsers();
+
+        session.commit();
+        session.close();
+        return results;
+    }
+    public static List<NodeBean> getUserInfo(){
+
+        SqlSession session = MybaitsUtil.getSession().openSession();
+        UserMapper mapper = session.getMapper(UserMapper.class);
+
+        List<NodeBean> results = mapper.getUserInfo();
+        for (NodeBean node:results) {
+            node.setGroup("friends");
+        }
 
         session.commit();
         session.close();

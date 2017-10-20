@@ -1,0 +1,42 @@
+.network{
+    margin-top: 10px;
+    width: 1000px;
+    height: 600px;
+    border:1px #999 solid;
+    border-radius: 10px;
+}
+.options{
+    font-size:14px;
+}
+.keyword{
+    width:350px;
+    border:1px #999 solid;
+    border-radius:5px;
+}
+.search,.search:visited{
+    background-color:#96ff2f;
+    color:white;
+    font-weight: 600;
+    border:0;
+    outline:none;
+    font-size:15px;
+
+}
+.search:hover,.search:active{
+    background-color:#58c22d;
+    border:0;
+    box-shadow:none;
+}
+.view-btn,.view-btn:visited{
+    background-color:#41ceff;
+    color:white;
+    font-weight: 600;
+    border:0;
+    outline:none;
+    font-size:15px;
+}
+.view-btn:hover,.view-btn:active{
+    background-color:#3eb0e0;
+    border:0;
+    box-shadow:none;
+}

@@ -96,10 +96,26 @@
                 <div>
                     <%
                         for (Activity message : activities) {
+                            String keyword = message.getKeyword();
+
                     %>
                     <div>
                         <div class="message">
                             <span class="content"><%=message.getOperation()%></span>
+                            <%
+                                if (message.getKeyword() != null && !message.getKeyword().equals("")){
+                            %>
+                            <label class="keyword"><strong>Keyword: </strong><%=message.getKeyword()%></label>
+                            <%
+                                }
+                            %>
+                            <%
+                                if (message.getName_entity() != null && !message.getName_entity().equals("")){
+                            %>
+                            <label class="keyword"><strong>Name Entity: </strong><%=message.getName_entity()%></label>
+                            <%
+                                }
+                            %>
                             <label class="date"><%=message.getDate()%></label>
                         </div>
                     </div>
