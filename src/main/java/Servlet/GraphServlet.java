@@ -31,6 +31,7 @@ public class GraphServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         String action = req.getParameter("action");
+        UserBean account = (UserBean)req.getSession().getAttribute("userInfo");
         String graphJson = "";
         if (action != null){
             String option = req.getParameter("options");
@@ -73,7 +74,7 @@ public class GraphServlet extends HttpServlet {
             }else if (option.equals("friend")){
                 if (keyword.equals("") || keyword == null){
                     List<NodeBean> nodes = new ArrayList<NodeBean>();
-                    List<NodeBean> friend_nodes = FriendDAO.getFriendsDetail("HarleyQuinn");
+                    List<NodeBean> friend_nodes = FriendDAO.getFriendsDetail(account.getUsername());
                     nodes.addAll(friend_nodes);
                     for (NodeBean node : friend_nodes) {
                         List<NodeBean> friends_nodes = FriendDAO.getFriendsDetail(node.id);
