@@ -64,7 +64,6 @@ $(function () {
             data:$(this).serialize(),
             dataType:'json',
             success:function (data) {
-                alert('show');
                 console.log(data['nodes']);
                 console.log(data['edges']);
                 drawGraph(data);
